@@ -12,6 +12,10 @@ pip install torch==2.6.0+cu124 torchvision==0.21.0+cu124 \
 # Install other requirements
 pip install -r requirements-all.txt \
     --extra-index-url https://download.pytorch.org/whl/cu124
+
+# Patch anomalib FastFlow to support resnet50 backbone (required for Exp 3)
+sed -i 's/backbone in {"resnet18", "wide_resnet50_2"}/backbone in {"resnet18", "resnet50", "wide_resnet50_2"}/' \
+    $(python -c "import anomalib.models.image.fastflow.torch_model as m; print(m.__file__)")
 ```
 
 ## Dataset
