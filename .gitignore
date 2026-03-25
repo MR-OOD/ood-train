@@ -1,12 +1,12 @@
-results/
+results/*
 !results/.gitkeep
 
-datasets/
+datasets/*
 !datasets/.gitkeep
 
-pre_trained/
+pre_trained/*
 !pre_trained/.gitkeep
-RadImageNet_pytorch/
+RadImageNet_pytorch/*
 !RadImageNet_pytorch/.gitkeep
 
 __pycache__/
