@@ -53,7 +53,7 @@ MEMORY_MODEL_REGISTRY: dict[str, dict] = {
         "class":              Patchcore,
         "init_kwargs":        {
             "pre_trained":            True,
-            "coreset_sampling_ratio": 0.1,
+            "coreset_sampling_ratio": 0.001,
             "num_neighbors":          9,
         },
         "trainer_type":       "engine",
