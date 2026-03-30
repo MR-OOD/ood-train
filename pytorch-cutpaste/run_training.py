@@ -197,14 +197,14 @@ if __name__ == '__main__':
     parser.add_argument('--data_root', default=None,
                         help='path to dataset root (required when --type custom)')
     parser.add_argument('--config', default=None,
-                        help='override YAML config path (default: config/{type}_cutpaste.yaml)')
+                        help='override YAML config path (default: config/cutpaste.yaml)')
     parser.add_argument('--no-pretrained', dest='pretrained', default=True, action='store_false',
                         help='use pretrained values to initalize ResNet18 , (default: True)')
 
     args = parser.parse_args()
     print(args)
 
-    config_path = args.config if args.config else f"config/{args.type}_cutpaste.yaml"
+    config_path = args.config if args.config else f"config/cutpaste.yaml"
     print(f"reading config {config_path}...")
     with open(config_path, 'r') as file:
         config = yaml.safe_load(file)
