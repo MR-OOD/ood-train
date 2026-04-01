@@ -3,17 +3,16 @@
 
 model:
   name: cutpaste
-  #pretrained: true          # use ImageNet-pre-trained ResNet18
-  head_layer: 8             # number of 512-wide layers in the projection head (+ 128 output)
+  head_layer: 2             # number of 512-wide layers in the projection head (+ 128 output)
   variant: 3way             # normal | scar | 3way
 
 train:
-  epochs: 64
-  batch_size: 16
-  test_epochs: 10
+  epochs: 64 #256
+  batch_size: 16 #64
+  test_epochs: 10 
   workers: 8
   lr: 0.01
-  optimizer: sgd            # sgd | adam
+  optim: sgd            # sgd | adam
   weights: true
   freeze_resnet: 20         # freeze backbone for first N epochs, then unfreeze
   gpu: 0                    # GPU index; -1 for CPU
